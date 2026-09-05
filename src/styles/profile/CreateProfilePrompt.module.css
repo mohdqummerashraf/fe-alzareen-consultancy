@@ -1,0 +1,110 @@
+.wrap {
+  max-width: 520px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-paper-3);
+  border-radius: 20px;
+  padding: 36px 32px;
+  box-shadow: 0 20px 60px rgba(19, 27, 52, 0.08);
+}
+
+.card h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--color-text-soft);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-text-soft);
+}
+
+.field input {
+  padding: 12px 14px;
+  border: 1px solid var(--color-paper-3);
+  border-radius: 10px;
+  font-size: 14.5px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--color-gold);
+}
+
+.errorMsg {
+  font-size: 13.5px;
+  color: #b91c1c;
+  background: rgba(185, 28, 28, 0.06);
+  border: 1px solid rgba(185, 28, 28, 0.2);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.field select {
+  padding: 12px 14px;
+  border: 1px solid var(--color-paper-3);
+  border-radius: 10px;
+  font-size: 14.5px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.field select:focus {
+  outline: none;
+  border-color: var(--color-gold);
+}
+
+.field select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.submitBtn {
+  margin-top: 4px;
+  height: 48px;
+  background: var(--color-ink);
+  color: var(--color-white);
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.submitBtn:hover {
+  background: var(--color-route);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

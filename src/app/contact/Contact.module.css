@@ -1,0 +1,293 @@
+/* ===================================
+   Page
+=================================== */
+
+.page {
+  min-height: 100vh;
+  background: var(--color-paper);
+  padding-bottom: 1px;
+}
+
+/* ===================================
+   Header
+=================================== */
+
+.header {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 2.5rem;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-route);
+}
+
+.title {
+  margin: 1rem 0 0;
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--color-ink);
+}
+
+.subtitle {
+  max-width: 42rem;
+  margin: 1rem auto 0;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-text-soft);
+}
+
+/* ===================================
+   Contact options
+=================================== */
+
+.tilesSection {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 3.5rem;
+}
+
+.tilesGrid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.tile {
+  display: flex;
+  min-height: 260px;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--color-paper-3);
+  border-radius: var(--radius-card);
+  background: var(--color-white);
+  padding: 2rem 1.5rem;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: var(--shadow-card, 0 10px 28px rgba(19, 27, 52, 0.08));
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.tile:hover {
+  transform: translateY(-4px);
+  border-color: rgba(19, 27, 52, 0.2);
+  box-shadow: 0 16px 32px rgba(19, 27, 52, 0.12);
+}
+
+.tile:focus-visible,
+.directionsButton:focus-visible,
+.officeText:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+.tileIcon {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  color: var(--color-white);
+}
+
+.tileIconCall {
+  background: var(--color-ink);
+}
+
+.tileIconWhatsapp {
+  background: var(--color-teal);
+}
+
+.tileIconVisit {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+.tileTitle {
+  margin: 1.25rem 0 0;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.tileSub {
+  margin: 0.35rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--color-text-soft);
+}
+
+.tileValue {
+  margin: auto 0 0;
+  padding-top: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-route);
+}
+
+/* ===================================
+   Office information and map
+=================================== */
+
+.officeSection {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 3.5rem;
+}
+
+.officeCard,
+.mapCard {
+  overflow: hidden;
+  border: 1px solid var(--color-paper-3);
+  border-radius: var(--radius-card);
+  background: var(--color-white);
+  box-shadow: var(--shadow-card, 0 10px 28px rgba(19, 27, 52, 0.08));
+}
+
+.officeCard {
+  padding: 2rem 1.75rem;
+}
+
+.officeRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.officeRow + .officeRow {
+  margin-top: 1.5rem;
+}
+
+.officeIcon {
+  display: flex;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: 0 0 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: var(--color-paper-2);
+  color: var(--color-ink);
+}
+
+.officeTitle {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.officeText {
+  display: inline-block;
+  margin-top: 0.25rem;
+  color: var(--color-text-soft);
+  line-height: 1.65;
+  text-decoration: none;
+}
+
+a.officeText:hover {
+  color: var(--color-route);
+  text-decoration: underline;
+}
+
+.directionsButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+  border-radius: 9999px;
+  background: var(--color-ink);
+  padding: 0.85rem 1.15rem;
+  color: var(--color-white);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.directionsButton:hover {
+  transform: translateY(-2px);
+  background: var(--color-route);
+}
+
+.mapCard {
+  margin-top: 1.25rem;
+}
+
+.map {
+  display: block;
+  width: 100%;
+  height: 360px;
+  border: 0;
+}
+
+/* ===================================
+   Lead form
+=================================== */
+
+.formSection {
+  /* max-width: 42rem; */
+  margin: 0 auto;
+  /* padding: 0 1.5rem 5rem; */
+}
+
+/* ===================================
+   Responsive
+=================================== */
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .tilesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .officeCard {
+    padding: 2rem 2.25rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .header {
+    padding-top: 3rem;
+  }
+
+  .tile {
+    min-height: 230px;
+  }
+
+  .map {
+    height: 280px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile,
+  .directionsButton {
+    transition: none;
+  }
+
+  .tile:hover,
+  .directionsButton:hover {
+    transform: none;
+  }
+}

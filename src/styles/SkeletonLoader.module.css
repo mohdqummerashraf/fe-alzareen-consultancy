@@ -1,0 +1,190 @@
+.page {
+  min-height: 100vh;
+  padding-bottom: 80px;
+  background: var(--color-paper);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 10px;
+  margin: 28px 0 20px;
+}
+
+.hero {
+  padding: 56px 40px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, var(--color-ink) 0%, #1f2a4d 100%);
+}
+
+.heroTop {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.heroCopy {
+  flex: 1;
+}
+
+.badge,
+.statIcon,
+.line {
+  animation: shimmer 1.5s ease-in-out infinite;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.12) 25%,
+    rgba(255, 255, 255, 0.24) 50%,
+    rgba(255, 255, 255, 0.12) 75%
+  );
+  background-size: 200% 100%;
+}
+
+.badge {
+  width: 68px;
+  height: 68px;
+  flex: 0 0 68px;
+  border-radius: 50%;
+}
+
+.line {
+  height: 14px;
+  border-radius: 999px;
+}
+
+.breadcrumb .line,
+.section .line {
+  background: linear-gradient(
+    90deg,
+    rgba(19, 27, 52, 0.08) 25%,
+    rgba(19, 27, 52, 0.16) 50%,
+    rgba(19, 27, 52, 0.08) 75%
+  );
+  background-size: 200% 100%;
+}
+
+.breadcrumbShort {
+  width: 72px;
+}
+
+.breadcrumbLong {
+  width: 110px;
+}
+
+.title {
+  width: min(560px, 85%);
+  height: 36px;
+}
+
+.tagline {
+  width: min(360px, 60%);
+  margin-top: 14px;
+}
+
+.description {
+  width: 100%;
+  margin-top: 28px;
+}
+
+.descriptionShort {
+  width: 72%;
+  margin-top: 10px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.statCard {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.statIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+}
+
+.statLabel {
+  width: 72px;
+  margin-top: 14px;
+}
+
+.statValue {
+  width: 120px;
+  height: 20px;
+  margin-top: 12px;
+}
+
+.section {
+  margin-top: 40px;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sectionTitle {
+  width: min(320px, 70%);
+  height: 28px;
+}
+
+.sectionText {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.sectionTextShort {
+  width: 68%;
+  margin-top: 10px;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 18px;
+  }
+
+  .hero {
+    padding: 40px 24px;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    height: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge,
+  .statIcon,
+  .line {
+    animation: none;
+  }
+}

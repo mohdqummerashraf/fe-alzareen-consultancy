@@ -1,0 +1,203 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 32px;
+  color: var(--color-ink);
+  margin-bottom: 6px;
+}
+
+.header p {
+  color: var(--color-text-soft);
+}
+
+.score {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  background: var(--color-paper);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+}
+
+.score span {
+  font-size: 34px;
+  color: var(--color-gold);
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  border: 1px solid var(--color-border);
+
+  background: white;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+
+  border-radius: 18px;
+
+  background: var(--color-paper);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--color-gold);
+}
+
+.left h3 {
+  margin-bottom: 6px;
+  color: var(--color-ink);
+}
+
+.left p {
+  color: var(--color-text-soft);
+  margin-bottom: 10px;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #15803d;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+}
+
+.actions button {
+  height: 48px;
+  padding: 0 24px;
+
+  border-radius: 999px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+}
+
+.download {
+  background: var(--color-gold);
+  color: white;
+  border: none;
+}
+
+.replace {
+  border: 1px solid var(--color-border);
+  background: white;
+}
+
+.upload {
+  border: 2px dashed var(--color-border);
+
+  border-radius: 24px;
+
+  padding: 60px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 18px;
+}
+
+.upload button {
+  padding: 14px 28px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background: var(--color-gold);
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.upload small {
+  color: var(--color-text-soft);
+}
+
+.tips {
+  padding: 30px;
+
+  border-radius: 20px;
+
+  background: var(--color-paper);
+}
+
+.tips h3 {
+  margin-bottom: 20px;
+}
+
+.tips ul {
+  display: grid;
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .upload {
+    padding: 40px 24px;
+  }
+}

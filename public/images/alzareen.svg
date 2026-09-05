@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 240" role="img" aria-labelledby="title desc">
+  <title id="title">Alzareen International logo</title>
+  <desc id="desc">A navy and gold compass-inspired monogram with the words Alzareen International.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E7C77A"/>
+      <stop offset="1" stop-color="#B9862B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Compass / destination mark -->
+  <g transform="translate(18 18)">
+    <circle cx="102" cy="102" r="92" fill="#131B34"/>
+    <circle cx="102" cy="102" r="75" fill="none" stroke="url(#gold)" stroke-width="3"/>
+    <path d="M102 29 123 81 175 102 123 123 102 175 81 123 29 102 81 81Z" fill="url(#gold)"/>
+    <path d="M102 55 116 91 151 102 116 113 102 149 88 113 53 102 88 91Z" fill="#131B34"/>
+    <!-- A-shaped route -->
+    <path d="M74 139 102 67 130 139M85 111h34" fill="none" stroke="#FBFAF6" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/>
+    <circle cx="102" cy="67" r="5" fill="#E7C77A"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g fill="#131B34">
+    <text x="248" y="106" font-family="Georgia, 'Times New Roman', serif" font-size="65" font-weight="700" letter-spacing="1">ALZAREEN</text>
+    <text x="252" y="151" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="6">INTERNATIONAL</text>
+  </g>
+  <path d="M252 173h592" stroke="#B9862B" stroke-width="3"/>
+  <text x="252" y="204" fill="#506078" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="1.2">GLOBAL MANPOWER CONSULTANCY</text>
+</svg>

@@ -1,0 +1,881 @@
+.page {
+  font-family: var(--font-sans);
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.sectionHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 44px;
+  gap: 24px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-route);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  color: var(--color-ink);
+  margin-bottom: 24px;
+}
+
+/* section head */
+
+.sectionDescription {
+  max-width: 100% !important;
+  margin-top: 20px;
+
+  font-size: 15px;
+  line-height: 2;
+
+  color: var(--color-text-soft);
+}
+
+.seoTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.seoTags span {
+  background: var(--color-paper);
+  border: 1px solid var(--color-paper-3);
+
+  padding: 8px 12px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  color: var(--color-ink-soft);
+}
+
+.countryCard {
+  display: block;
+
+  background: var(--color-white);
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--color-paper-3);
+
+  transition: all 0.35s ease;
+
+  text-decoration: none;
+}
+
+.countryCard:hover {
+  transform: translateY(-8px);
+
+  border-color: var(--color-gold);
+
+  box-shadow: 0 25px 50px rgba(19, 27, 52, 0.12);
+}
+
+.countryHeader {
+  height: 120px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.countryHeader span {
+  color: white;
+
+  font-size: 42px;
+
+  font-weight: 700;
+
+  font-family: var(--font-mono);
+
+  opacity: 0.95;
+}
+
+.countryContent {
+  padding: 24px;
+}
+
+.countryContent h3 {
+  font-size: 24px;
+
+  margin-bottom: 10px;
+
+  color: var(--color-ink);
+}
+
+.countryContent p {
+  color: var(--color-text-soft);
+
+  line-height: 1.5;
+
+  margin-bottom: 20px;
+
+  min-height: 44px;
+}
+.salaryTag {
+  display: inline-flex;
+
+  background: rgba(185, 134, 43, 0.12);
+
+  color: var(--color-gold);
+
+  font-weight: 700;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  margin-bottom: 18px;
+}
+
+.cityList {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 24px;
+}
+
+.cityList span {
+  background: var(--color-paper);
+
+  color: var(--color-ink-soft);
+
+  border-radius: 999px;
+
+  padding: 6px 12px;
+
+  font-size: 12px;
+}
+
+.bottomRow {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding-top: 18px;
+
+  border-top: 1px solid var(--color-paper-3);
+}
+
+.bottomRow strong {
+  color: var(--color-ink);
+}
+
+.bottomRow span {
+  color: var(--color-route);
+
+  font-weight: 600;
+}
+
+.professionList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.professionList span {
+  background: var(--color-paper);
+  border: 1px solid var(--color-paper-3);
+  border-radius: 999px;
+
+  padding: 6px 12px;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.cityTags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  margin-top: 16px;
+}
+
+.cityTags span {
+  background: rgba(31, 122, 108, 0.08);
+
+  color: var(--color-teal);
+
+  border-radius: 999px;
+
+  padding: 6px 10px;
+
+  font-size: 12px;
+}
+
+.cta {
+  margin-top: 80px;
+
+  background: linear-gradient(135deg, var(--color-ink), var(--color-route));
+
+  color: white;
+
+  text-align: center;
+
+  padding: 90px 40px;
+
+  border-radius: 24px;
+}
+
+.cta h2 {
+  font-size: 48px;
+  margin-bottom: 14px;
+}
+
+.cta p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  opacity: 0.85;
+}
+
+.countryBanner {
+  margin: -24px -24px 20px;
+  padding: 16px 20px;
+
+  color: white;
+
+  font-family: var(--font-mono);
+
+  font-size: 12px;
+}
+
+.countryBanner {
+  margin: -24px -24px 20px;
+  padding: 16px 20px;
+
+  color: white;
+
+  font-family: var(--font-mono);
+
+  font-size: 12px;
+}
+.cityTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.cityTags span {
+  background: var(--color-paper);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.regionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 4rem 0 1.5rem;
+}
+
+.regionHeader h2 {
+  font-size: 32px;
+}
+
+.regionHeader span {
+  color: var(--color-text-soft);
+}
+.gccGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
+  gap: 24px;
+
+  margin-top: 40px;
+}
+
+.badges span {
+  background: rgba(185, 134, 43, 0.12);
+
+  color: var(--color-gold);
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+}
+.professionList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 14px;
+}
+
+.cta {
+  background: linear-gradient(135deg, var(--color-ink), var(--color-route));
+
+  color: white;
+
+  text-align: center;
+
+  padding: 80px 40px;
+
+  border-radius: 24px;
+}
+
+.countriesHero {
+  padding: 56px 0 0;
+}
+.title {
+  font-size: clamp(32px, 3.6vw, 46px);
+  line-height: 1.08;
+  margin: 14px 0 12px;
+}
+.lede {
+  font-size: 16px;
+  color: var(--color-text-soft);
+  max-width: 560px;
+}
+
+.regionBlock {
+  margin-top: 44px;
+}
+.regionHead {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.regionHead h2 {
+  font-size: 22px;
+}
+.regionCount {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-text-soft);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 56px;
+}
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-paper-3);
+  border-radius: 12px;
+  padding: 24px 22px;
+  position: relative;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -24px rgba(19, 27, 52, 0.3);
+}
+.flagchip {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 18px;
+}
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.cardTagline {
+  font-size: 13px;
+  color: var(--color-text-soft);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--color-route);
+  border-top: 1px dashed var(--color-paper-3);
+  padding-top: 14px;
+}
+
+/* ================= DETAIL PAGE ================= */
+.detailHero {
+  padding: 56px 0 0;
+}
+.breadcrumb {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--color-text-soft);
+  margin-bottom: 18px;
+}
+.breadcrumb a {
+  color: var(--color-route);
+}
+.detailHeadRow {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+.detailFlag {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-white);
+  flex-shrink: 0;
+}
+.detailTitle {
+  font-size: clamp(30px, 3.4vw, 42px);
+  line-height: 1.08;
+}
+.detailTagline {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-route);
+  margin-top: 4px;
+}
+.detailDescription {
+  font-size: 16px;
+  color: var(--color-text-soft);
+  max-width: 640px;
+  margin-bottom: 8px;
+}
+
+.statBand {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 36px 0 8px;
+}
+.statCard {
+  background: var(--color-white);
+  border: 1px solid var(--color-paper-3);
+  border-radius: 12px;
+  padding: 22px;
+}
+.statLabel {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-soft);
+  display: block;
+  margin-bottom: 10px;
+}
+.statValue {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  color: var(--color-ink);
+}
+
+.professionChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.chip {
+  background: var(--color-paper-2);
+  border: 1px solid var(--color-paper-3);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+}
+
+.visaCard {
+  background: var(--color-white);
+  border: 1px solid var(--color-paper-3);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 14px;
+}
+.visaCard p {
+  font-size: 14.5px;
+  color: var(--color-text-soft);
+  line-height: 1.6;
+}
+
+/* Roles board reused shape, condensed */
+.rolesBoard {
+  background: var(--color-ink);
+  border-radius: 16px;
+  padding: 8px;
+  margin: 20px 0 20px;
+}
+.roleRow {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 22px;
+  border-top: 1px solid rgba(251, 250, 246, 0.08);
+  color: var(--color-white);
+}
+.roleRow:first-child {
+  border-top: none;
+}
+.roleTitle {
+  font-family: var(--font-serif);
+  font-size: 16px;
+}
+.roleTitle span {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: rgba(251, 250, 246, 0.5); /* This remains unchanged as it's a direct RGBA value */
+  margin-top: 2px;
+}
+.roleMeta {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-gold-light);
+}
+.roleApply {
+  color: var(--color-gold-light);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  border: 1px solid rgba(231, 199, 122, 0.4); /* This remains unchanged as it's a direct RGBA value */
+  padding: 8px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.roleApply:hover {
+  background: var(--color-gold-light);
+  color: var(--color-ink);
+}
+
+.noRoles {
+  background: var(--color-ink);
+  border-radius: 16px;
+  padding: 40px 28px;
+  text-align: center;
+  color: rgba(251, 250, 246, 0.75); /* This remains unchanged as it's a direct RGBA value */
+  margin: 20px 0 20px;
+}
+.noRoles h3 {
+  color: var(--color-white);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.noRoles p {
+  font-size: 14px;
+  color: rgba(251, 250, 246, 0.5); /* This remains unchanged as it's a direct RGBA value */
+}
+
+.otherCountries {
+  margin: 12px 0 88px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .statBand {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .roleRow {
+    grid-template-columns: 1fr;
+    row-gap: 6px;
+    text-align: left;
+  }
+  .detailHeadRow {
+    align-items: flex-start;
+  }
+}
+
+/* ===================================
+   Countries page: responsive overrides
+=================================== */
+
+@media (max-width: 1000px) {
+  .wrap {
+    padding: 0 24px;
+  }
+
+  .gccGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .regionHeader {
+    margin-top: 3rem;
+  }
+
+  .regionHeader h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 720px) {
+  .wrap {
+    padding: 0 18px;
+  }
+
+  .otherCountries {
+    margin: 8px 0 56px;
+  }
+
+  .sectionHead {
+    display: block;
+    margin-bottom: 28px;
+  }
+
+  .sectionTitle {
+    margin: 10px 0 14px;
+    font-size: 1.65rem;
+    line-height: 1.25;
+  }
+
+  .sectionDescription {
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+
+  .seoTags {
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .seoTags span {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+
+  .regionHeader {
+    align-items: flex-start;
+    gap: 8px;
+    margin: 2.5rem 0 1rem;
+  }
+
+  .regionHeader h2 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .regionHeader span {
+    padding-top: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .gccGrid,
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+
+  .countryCard {
+    border-radius: 16px;
+  }
+
+  .countryCard:hover {
+    transform: none;
+  }
+
+  .countryHeader {
+    height: 96px;
+  }
+
+  .countryHeader span {
+    font-size: 32px;
+  }
+
+  .countryContent {
+    padding: 20px;
+  }
+
+  .countryContent h3 {
+    font-size: 21px;
+  }
+
+  .countryContent p {
+    min-height: 0;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+
+  .salaryTag {
+    margin-bottom: 14px;
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+
+  .cityList,
+  .professionList,
+  .cityTags {
+    gap: 6px;
+    margin-top: 12px;
+    margin-bottom: 18px;
+  }
+
+  .cityList span,
+  .professionList span,
+  .cityTags span {
+    padding: 5px 9px;
+    font-size: 11px;
+  }
+
+  .bottomRow {
+    padding-top: 14px;
+    font-size: 13px;
+  }
+
+  .cta {
+    margin-top: 48px;
+    padding: 48px 20px;
+    border-radius: 18px;
+  }
+
+  .cta h2 {
+    font-size: 30px;
+  }
+
+  /* Shared country-detail styles */
+  .detailHero {
+    padding-top: 32px;
+  }
+
+  .detailHeadRow {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .detailFlag {
+    width: 46px;
+    height: 46px;
+    font-size: 11px;
+  }
+
+  .detailTitle {
+    font-size: 28px;
+  }
+
+  .detailDescription {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .statBand {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .statCard {
+    padding: 18px;
+  }
+
+  .visaCard {
+    padding: 20px;
+  }
+
+  .rolesBoard {
+    border-radius: 12px;
+  }
+
+  .roleRow {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    padding: 18px 16px;
+  }
+
+  .roleApply {
+    justify-self: start;
+    margin-top: 6px;
+  }
+}
+
+@media (max-width: 380px) {
+  .regionHeader {
+    flex-direction: column;
+  }
+
+  .regionHeader span {
+    padding-top: 0;
+  }
+
+  .bottomRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .countryCard {
+    transition: none;
+  }
+}

@@ -1,0 +1,139 @@
+.drivesSection {
+  padding: 48px 0 80px;
+}
+
+.drivesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.driveCard {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--color-paper-3);
+  box-shadow: 0 14px 40px rgba(19, 27, 52, 0.06);
+  transition: all 0.3s ease;
+}
+
+.driveCard:hover {
+  box-shadow: 0 25px 60px rgba(19, 27, 52, 0.15);
+}
+
+.driveImage {
+  height: 100%;
+  min-height: 220px;
+}
+
+.driveImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.driveContent {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.driveMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.driveMeta span {
+  background: rgba(185, 134, 43, 0.12);
+  color: var(--color-gold);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.driveContent h2 {
+  font-size: 26px;
+  margin-bottom: 12px;
+  color: var(--color-ink);
+  line-height: 1.25;
+}
+
+.summary {
+  color: var(--color-text-soft);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  font-size: 14.5px;
+}
+
+.driveStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.driveStats strong {
+  display: block;
+  font-size: 20px;
+  color: var(--color-ink);
+}
+
+.driveStats span {
+  font-size: 12px;
+  color: var(--color-text-soft);
+}
+
+.viewBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  background: var(--color-ink);
+  color: var(--color-white);
+  padding: 13px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: auto;
+  transition: background 0.2s ease;
+}
+
+.viewBtn:hover {
+  background: var(--color-route);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .driveCard {
+    grid-template-columns: 1fr;
+  }
+
+  .driveImage {
+    height: 220px;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .driveContent {
+    padding: 20px;
+  }
+
+  .driveContent h2 {
+    font-size: 21px;
+  }
+
+  .driveStats {
+    gap: 18px;
+  }
+
+  .viewBtn {
+    width: 100%;
+    align-self: stretch;
+  }
+}

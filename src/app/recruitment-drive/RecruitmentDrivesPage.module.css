@@ -1,0 +1,104 @@
+.filterSection {
+  position: relative;
+  z-index: 20;
+  max-width: 1180px;
+  width: 100%;
+  padding: 0 28px;
+  margin: 0px auto 0;
+}
+
+.recruitmentDrivesContainer {
+  max-width: 1180px;
+  width: 100%;
+
+  margin: 40px auto 0;
+
+  padding: 0 28px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.recruitmentDrivesTitle {
+  font-size: clamp(28px, 4vw, 38px);
+
+  font-family: var(--font-serif);
+
+  color: var(--color-ink);
+
+  line-height: 1.1;
+}
+
+.recruitmentDrivesCount {
+  color: var(--color-text-soft);
+
+  font-size: 14px;
+
+  font-family: var(--font-mono);
+}
+
+.drivesGrid {
+  max-width: 1180px;
+  width: 100%;
+
+  margin: 30px auto;
+
+  padding: 0 28px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+@media (max-width: 1024px) {
+  .filterSection,
+  .recruitmentDrivesContainer,
+  .drivesGrid {
+    padding: 0 20px;
+  }
+
+  .recruitmentDrivesContainer {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .filterSection,
+  .recruitmentDrivesContainer,
+  .drivesGrid {
+    padding: 0 16px;
+  }
+
+  .recruitmentDrivesContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .recruitmentDrivesTitle {
+    font-size: 28px;
+  }
+
+  .recruitmentDrivesCount {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filterSection,
+  .recruitmentDrivesContainer,
+  .drivesGrid {
+    padding: 0 12px;
+  }
+
+  .recruitmentDrivesTitle {
+    font-size: 24px;
+  }
+
+  .recruitmentDrivesCount {
+    width: 100%;
+  }
+}

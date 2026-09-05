@@ -1,0 +1,78 @@
+.searchCard {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-paper-3);
+  border-radius: var(--radius-m);
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr auto;
+  gap: 12px;
+  box-shadow: 0 18px 40px -22px rgba(19, 27, 52, 0.35);
+  border-radius: 8px;
+  /* background-color: "red" */
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.field label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+}
+.field select,
+.field input {
+  border: none;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--color-ink);
+  font-weight: 600;
+  padding: 2px 0;
+  width: 100%;
+}
+.fieldDivider {
+  border-right: 1px dashed var(--color-paper-3);
+  padding-right: 12px;
+}
+.searchBtn {
+  background: var(--color-ink);
+  color: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  padding: 0 24px;
+  font-weight: 600;
+  font-size: 14px;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s ease;
+  position: relative;
+  top: 6px;
+}
+.searchBtn:hover {
+  background: var(--color-route);
+}
+
+@media (max-width: 768px) {
+  .searchCard {
+    grid-template-columns: 1fr;
+    padding: 14px;
+    gap: 14px;
+  }
+
+  .fieldDivider {
+    border-right: 0;
+    border-bottom: 1px dashed var(--color-paper-3);
+    padding: 0 0 12px;
+  }
+
+  .searchBtn {
+    min-height: 48px;
+    padding: 13px 20px;
+  }
+}

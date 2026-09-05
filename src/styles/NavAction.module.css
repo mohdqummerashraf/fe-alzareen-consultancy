@@ -1,0 +1,59 @@
+.mobileActions {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+}
+
+.jobPostActions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+    background-color: var(--color-ink);  
+    border-radius: 9999px;  
+    padding: 6px 10px;  
+    color: var(--color-white); 
+    font-weight: bold;
+    
+}
+
+ 
+.profileActions{
+    display: flex;
+    height: 2.75rem; /* h-11 */
+    width: 2.75rem; /* w-11 */
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px; /* rounded-full */
+    background-color: var(--color-paper-3);
+ }
+ 
+ @media (max-width: 480px) {
+      .mobileActions {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 80%;
+}
+.jobPostActions {
+    height: 2.5rem; 
+    /* width: 2.75rem; w-11 */
+    background-color: var(--color-ink) !important;  
+    border-radius: 25px;  
+    padding: 2px 10px;  
+    font-weight: bold;
+     
+    
+}
+.jobPostActions a{
+    color: var(--color-white) !important;
+    border-bottom:none !important;
+}
+.profileActions{
+
+}
+.profileActions a{
+border-bottom:none !important;
+}
+ }

@@ -1,0 +1,159 @@
+/* ===== Wrapper ===== */
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    justify-content: flex-end;
+  }
+}
+
+/* ===== "Boarding confirmed" tag ===== */
+.tag {
+  position: absolute;
+  top: -1rem;
+  right: 2rem;
+  z-index: 20;
+  transform: rotate(-4deg);
+  border-radius: 9999px;
+  background: var(--color-gold);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-ink);
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Ticket shell ===== */
+.ticket {
+  position: relative;
+  transform: rotate(2deg);
+  overflow: hidden;
+  border-radius: 1rem;
+  background: var(--color-ink);
+  color: var(--color-white);
+  box-shadow: 0 30px 60px -20px rgba(19, 27, 52, 0.5);
+  animation: var(--animate-float);
+}
+
+.notchLeft,
+.notchRight {
+  position: absolute;
+  top: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--color-paper);
+}
+.notchLeft {
+  left: -13px;
+}
+.notchRight {
+  right: -13px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 110px;
+}
+
+/* ===== Main panel ===== */
+.main {
+  position: relative;
+  padding: 1.75rem;
+}
+
+.dividerDashed {
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  bottom: 1rem;
+  border-right: 1px dashed rgba(251, 250, 246, 0.3);
+}
+
+/* ===== Route row (DEL — DXB) ===== */
+.route {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.routeRight {
+  text-align: right;
+}
+.city {
+  font-family: var(--font-serif);
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.cityCode {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--color-gold-light);
+}
+.plane {
+  color: var(--color-white);
+}
+
+/* ===== Detail rows (Passenger/Role, Employer/Contract) ===== */
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.detailRow:last-of-type {
+  margin-bottom: 0;
+}
+.detailRight {
+  text-align: right;
+}
+.label {
+  margin-bottom: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(251, 250, 246, 0.5);
+}
+.value {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* ===== Stub ===== */
+.stub {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--color-ink-soft);
+  padding: 1.5rem;
+}
+
+.qr {
+  width: 56px;
+  height: 56px;
+  background:
+    repeating-linear-gradient(90deg, var(--color-white) 0 3px, transparent 3px 6px),
+    repeating-linear-gradient(0deg, var(--color-white) 0 3px, transparent 3px 6px);
+  background-blend-mode: screen;
+  opacity: 0.85;
+  border-radius: 3px;
+}
+
+.seatLabel {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gold-light);
+}
+.seatValue {
+  font-size: 1.125rem;
+  color: var(--color-white);
+}

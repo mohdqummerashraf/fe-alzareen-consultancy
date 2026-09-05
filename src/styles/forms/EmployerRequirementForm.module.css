@@ -1,0 +1,289 @@
+/* This module is scoped to the form/card itself — page-level hero styles
+   (title, eyebrow, lede) live in app/employers/Employers.module.css */
+
+/* ================= Card / sections ================= */
+
+.card {
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  background: white;
+  box-shadow: 0 20px 40px -28px rgba(19, 27, 52, 0.2);
+  padding: 32px;
+}
+@media (max-width: 640px) {
+  .card {
+    padding: 22px;
+  }
+}
+
+.section {
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--color-border);
+}
+.section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.sectionHeading {
+  font-family: var(--font-heading);
+  font-size: 19px;
+  color: var(--color-ink);
+  margin-bottom: 4px;
+}
+
+.sectionSubtext {
+  font-size: 13.5px;
+  color: var(--color-text-soft);
+  margin-bottom: 20px;
+}
+
+/* ================= Field grid ================= */
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+@media (max-width: 640px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.required {
+  color: #ef4444;
+}
+
+.optionalTag {
+  font-weight: 400;
+  color: var(--color-text-soft);
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  background: var(--color-paper);
+  padding: 11px 14px;
+  font-size: 14.5px;
+  font-family: inherit;
+  color: var(--color-ink);
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.input::placeholder,
+.textarea::placeholder {
+  color: rgba(19, 27, 52, 0.3);
+}
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: var(--color-ink);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(19, 27, 52, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+/* ================= Role rows ================= */
+
+.roleList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.roleRow {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 16px;
+  background: var(--color-paper);
+}
+@media (max-width: 768px) {
+  .roleRow {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.roleRemove {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  height: 24px;
+  width: 24px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: var(--color-text-soft);
+  font-size: 14px;
+  line-height: 1;
+}
+.roleRemove:hover {
+  color: #ef4444;
+  background: #fef2f2;
+}
+
+.addRoleBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  border: 1px dashed var(--color-border);
+  border-radius: 999px;
+  background: none;
+  padding: 10px 20px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-top: 4px;
+}
+.addRoleBtn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+/* ================= Error banner ================= */
+
+.errorBox {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 12px;
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  padding: 12px 16px;
+}
+.errorIcon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #ef4444;
+}
+.errorText {
+  font-size: 14px;
+  font-weight: 500;
+  color: #b91c1c;
+}
+
+/* ================= Submit ================= */
+
+.submitRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 32px;
+}
+@media (max-width: 640px) {
+  .submitRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.submitNote {
+  font-size: 12.5px;
+  color: var(--color-text-soft);
+  max-width: 320px;
+}
+
+.submitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 999px;
+  background: var(--color-ink);
+  padding: 14px 32px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: white;
+  transition: opacity 0.2s ease;
+}
+.submitBtn:hover {
+  opacity: 0.9;
+}
+.submitBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.submitBtn:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+.spinner {
+  height: 16px;
+  width: 16px;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ================= Success state ================= */
+
+.successCard {
+  text-align: center;
+  padding: 56px 32px;
+}
+.successIcon {
+  margin: 0 auto 20px;
+  display: flex;
+  height: 56px;
+  width: 56px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #15803d;
+}
+.successTitle {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--color-ink);
+  margin-bottom: 8px;
+}
+.successText {
+  font-size: 14.5px;
+  color: var(--color-text-soft);
+  max-width: 420px;
+  margin: 0 auto;
+}

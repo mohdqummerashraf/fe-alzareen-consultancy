@@ -1,0 +1,403 @@
+.page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+}
+
+/* ===================================
+   Hero
+=================================== */
+
+.hero {
+  margin-bottom: 8px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  line-height: 1.15;
+  color: var(--color-ink);
+  margin: 12px 0 10px;
+}
+
+.lede {
+  max-width: 560px;
+  color: var(--color-text-soft);
+  font-size: 16px;
+}
+
+.statsRow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  padding: 20px 24px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px -20px rgba(19, 27, 52, 0.15);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.statValue {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.statLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-soft);
+}
+
+.statDivider {
+  width: 1px;
+  height: 32px;
+  background: var(--color-border);
+}
+
+/* ===================================
+   Sections
+=================================== */
+
+.section {
+  margin-top: 64px;
+}
+
+.sectionAlt {
+  margin-top: 64px;
+  padding: 40px 28px;
+  background: var(--color-paper);
+  border-radius: 20px;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  color: var(--color-ink);
+  margin-bottom: 24px;
+}
+
+/* ===================================
+   Tinted card base -- background/border
+   set per-color below. Same 6-color
+   palette as JobDetailPage.module.css.
+=================================== */
+
+.tint {
+  border: 1px solid transparent;
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.tint:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px -18px rgba(19, 27, 52, 0.25);
+}
+
+.tintBlue {
+  background: rgba(37, 99, 235, 0.07);
+  border-color: rgba(37, 99, 235, 0.22);
+}
+.tintBlue:hover {
+  border-color: #2563eb;
+}
+
+.tintPurple {
+  background: rgba(147, 51, 234, 0.07);
+  border-color: rgba(147, 51, 234, 0.22);
+}
+.tintPurple:hover {
+  border-color: #9333ea;
+}
+
+.tintTeal {
+  background: rgba(13, 148, 136, 0.07);
+  border-color: rgba(13, 148, 136, 0.22);
+}
+.tintTeal:hover {
+  border-color: #0d9488;
+}
+
+.tintAmber {
+  background: rgba(217, 119, 6, 0.08);
+  border-color: rgba(217, 119, 6, 0.24);
+}
+.tintAmber:hover {
+  border-color: #d97706;
+}
+
+.tintRose {
+  background: rgba(225, 29, 72, 0.07);
+  border-color: rgba(225, 29, 72, 0.22);
+}
+.tintRose:hover {
+  border-color: #e11d48;
+}
+
+.tintIndigo {
+  background: rgba(79, 70, 229, 0.07);
+  border-color: rgba(79, 70, 229, 0.22);
+}
+.tintIndigo:hover {
+  border-color: #4f46e5;
+}
+
+/* ---------- Icon badges (solid color, white icon) ---------- */
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.iconBlue {
+  background: #2563eb;
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.35);
+}
+.iconPurple {
+  background: #9333ea;
+  box-shadow: 0 6px 14px rgba(147, 51, 234, 0.35);
+}
+.iconTeal {
+  background: #0d9488;
+  box-shadow: 0 6px 14px rgba(13, 148, 136, 0.35);
+}
+.iconAmber {
+  background: #d97706;
+  box-shadow: 0 6px 14px rgba(217, 119, 6, 0.35);
+}
+.iconRose {
+  background: #e11d48;
+  box-shadow: 0 6px 14px rgba(225, 29, 72, 0.35);
+}
+.iconIndigo {
+  background: #4f46e5;
+  box-shadow: 0 6px 14px rgba(79, 70, 229, 0.35);
+}
+
+/* ---------- Inline icon text-color variants (for sector/process icons that sit inline, not in a badge) ---------- */
+
+.textBlue {
+  color: #2563eb;
+}
+.textPurple {
+  color: #9333ea;
+}
+.textTeal {
+  color: #0d9488;
+}
+.textAmber {
+  color: #d97706;
+}
+.textRose {
+  color: #e11d48;
+}
+.textIndigo {
+  color: #4f46e5;
+}
+
+/* ===================================
+   Benefits
+=================================== */
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.benefitCard {
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.benefitCard h3 {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 8px;
+}
+
+.benefitCard p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--color-text-soft);
+  margin: 0;
+}
+
+/* ===================================
+   Sectors
+=================================== */
+
+.sectorGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.sectorItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+/* ===================================
+   Process
+=================================== */
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.processCard {
+  position: relative;
+  border-radius: 16px;
+  padding: 24px 22px 22px;
+}
+
+.processNumber {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-ink);
+  color: var(--color-white);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.processCard h3 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 6px;
+}
+
+.processCard p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--color-text-soft);
+  margin: 0;
+}
+
+/* ===================================
+   Form section
+=================================== */
+
+.formSection {
+  margin-top: 64px;
+  padding: 36px 32px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  box-shadow: 0 12px 32px -20px rgba(19, 27, 52, 0.15);
+}
+
+.formLede {
+  max-width: 560px;
+  font-size: 14px;
+  color: var(--color-text-soft);
+  margin-bottom: 24px;
+}
+
+/* ===================================
+   FAQ
+=================================== */
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faqCard {
+  padding: 20px 24px;
+  border-radius: 14px;
+}
+
+.faqCard h3 {
+  font-family: var(--font-heading);
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin: 0 0 8px;
+}
+
+.faqCard p {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--color-text-soft);
+  margin: 0;
+}
+
+/* ===================================
+   Responsive
+=================================== */
+
+@media (max-width: 640px) {
+  .page {
+    padding: 40px 18px 72px;
+  }
+
+  .statsRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .statDivider {
+    display: none;
+  }
+
+  .benefitsGrid,
+  .sectorGrid,
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formSection {
+    padding: 26px 20px;
+  }
+}

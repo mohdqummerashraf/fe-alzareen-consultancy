@@ -1,0 +1,164 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 30px;
+  color: var(--color-ink);
+}
+
+.header span {
+  color: var(--color-text-soft);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.card {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-card);
+  transform: translateY(-4px);
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  background: var(--color-paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.info {
+  flex: 1;
+}
+
+.info h3 {
+  font-size: 24px;
+  margin-bottom: 6px;
+  color: var(--color-ink);
+}
+
+.info p {
+  color: var(--color-text-soft);
+  margin-bottom: 14px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 16px;
+  color: var(--color-text-soft);
+  font-size: 14px;
+}
+
+.progress {
+  width: 100%;
+  height: 8px;
+  background: var(--color-paper);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.fill {
+  height: 100%;
+  background: var(--color-gold);
+}
+
+.status {
+  display: inline-flex;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.interviewscheduled {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.underreview {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.offerreceived {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.details,
+.withdraw {
+  width: 160px;
+  height: 46px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.details {
+  border: none;
+  background: var(--color-gold);
+  color: #fff;
+}
+
+.details:hover {
+  background: var(--color-ink);
+}
+
+.withdraw {
+  border: 1px solid var(--color-border);
+  background: #fff;
+}
+
+.withdraw:hover {
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+@media (max-width: 900px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .details,
+  .withdraw {
+    width: 100%;
+  }
+}

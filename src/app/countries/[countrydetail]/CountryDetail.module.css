@@ -1,0 +1,700 @@
+/* ===================================
+   Layout
+=================================== */
+
+.page {
+  padding-bottom: 80px;
+  background: var(--color-paper);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ===================================
+   Breadcrumb
+=================================== */
+
+.breadcrumb {
+  padding: 24px 0 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: rgba(19, 27, 52, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb a {
+  color: rgba(19, 27, 52, 0.5);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-ink);
+  text-decoration: underline;
+}
+
+.breadcrumbSep {
+  font-size: 9px;
+  color: rgba(19, 27, 52, 0.3);
+}
+
+/* ===================================
+   Hero -- themed per country flag via
+   --flag-from / --flag-to custom
+   properties (set inline in page.jsx).
+   Falls back to the original ink
+   gradient when a country has no
+   flag theme defined.
+=================================== */
+
+.hero {
+  --flag-from: var(--color-ink);
+  --flag-to: #1f2a4d;
+
+  position: relative;
+  margin-top: 20px;
+  padding: 56px 40px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--flag-from) 0%, var(--flag-to) 100%);
+  color: var(--color-white);
+  transition: background 0.4s ease;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.18), transparent 55%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 6px;
+  background: linear-gradient(180deg, var(--color-gold) 0%, var(--color-gold-light) 100%);
+}
+
+.heroTop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 1;
+}
+
+.heroBadge {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-white);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.heroTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.heroTagline {
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.heroDescription {
+  position: relative;
+  z-index: 1;
+  margin-top: 24px;
+  max-width: 640px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ===================================
+   Stats
+=================================== */
+
+.statsGrid {
+  position: relative;
+  z-index: 1;
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.statCard {
+  position: relative;
+  border-radius: 16px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(6px);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.statIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: rgba(185, 134, 43, 0.25);
+  color: var(--color-gold-light);
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.statLabel {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.statValue {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.statChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-white);
+}
+
+/* ===================================
+   Generic section
+=================================== */
+
+.section {
+  margin-top: 28px;
+  padding: 30px;
+  border: 1px solid var(--color-border);
+  border-left: 4px solid transparent;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(19, 27, 52, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(19, 27, 52, 0.1);
+}
+
+.sectionBg {
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.05), var(--color-white) 40%);
+  border-left-color: #2563eb;
+}
+
+.sectionCities {
+  background: linear-gradient(180deg, rgba(22, 163, 74, 0.06), var(--color-white) 40%);
+  border-left-color: #16a34a;
+}
+
+.sectionWorkBg {
+  background: linear-gradient(180deg, rgba(217, 119, 6, 0.06), var(--color-white) 40%);
+  border-left-color: #d97706;
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.sectionHeading .sectionTitle {
+  margin-bottom: 0;
+}
+
+.sectionIcon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.iconGold {
+  background: linear-gradient(135deg, #e7c77a 0%, var(--color-gold) 100%);
+  color: var(--color-ink);
+  box-shadow: 0 6px 14px rgba(185, 134, 43, 0.3);
+}
+
+.iconRoute {
+  background: linear-gradient(135deg, #2c4a7c 0%, var(--color-ink) 100%);
+  color: var(--color-white);
+  box-shadow: 0 6px 14px rgba(44, 74, 124, 0.3);
+}
+
+.iconTeal {
+  background: linear-gradient(135deg, #1f7a6c 0%, #14524a 100%);
+  color: var(--color-white);
+  box-shadow: 0 6px 14px rgba(31, 122, 108, 0.3);
+}
+
+.sectionTitle {
+  margin-bottom: 14px;
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  color: var(--color-ink);
+}
+
+.sectionText {
+  max-width: 680px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(19, 27, 52, 0.7);
+}
+
+/* ===================================
+   Cities
+=================================== */
+
+.cityChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cityChip {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--color-gold);
+  font-size: 14px;
+  color: var(--color-ink);
+  background: var(--color-white);
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cityChip:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(185, 134, 43, 0.2);
+}
+
+/* ===================================
+   Application steps (timeline)
+=================================== */
+
+.stepsList {
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stepItem {
+  position: relative;
+  display: flex;
+  gap: 18px;
+  padding: 18px 0;
+}
+
+.stepItem:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  top: 46px;
+  left: 17px;
+  width: 2px;
+  height: calc(100% - 20px);
+  background: var(--color-border);
+}
+
+.stepIndex {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2c4a7c 0%, var(--color-ink) 100%);
+  color: var(--color-white);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  z-index: 1;
+  box-shadow: 0 6px 14px rgba(44, 74, 124, 0.3);
+}
+
+.stepText {
+  padding-top: 6px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(19, 27, 52, 0.75);
+}
+
+/* ===================================
+   CTA links
+=================================== */
+
+.ctaSection {
+  margin-top: 56px;
+  padding: 36px;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid var(--color-border);
+  border-left: 4px solid transparent;
+  /* box-shadow: 0 12px 32px -20px rgba(19, 27, 52, 0.15); */
+}
+
+.sectionNxtStpBg {
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.05), var(--color-white) 40%);
+  border-left-color: #2563eb;
+}
+
+.ctaText {
+  font-family: var(--font-heading);
+  font-size: 19px;
+  color: var(--color-ink);
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  padding: 12px 26px;
+  border-radius: 999px;
+  background: var(--color-gold);
+  color: var(--color-ink);
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ctaPrimary:hover {
+  background: var(--color-gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(185, 134, 43, 0.3);
+}
+
+.ctaSecondary {
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  color: var(--color-ink);
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ctaSecondary:hover {
+  border-color: var(--color-ink);
+  transform: translateY(-2px);
+}
+
+/* ===================================
+   Lead form area
+=================================== */
+
+.formSection {
+  margin-top: 64px;
+}
+
+/* ===================================
+   Responsive
+=================================== */
+
+/* ===================================
+   Responsive
+=================================== */
+
+.page {
+  overflow-x: clip;
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .hero {
+    padding: 48px 32px;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .statCard:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .section {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .hero {
+    margin-top: 14px;
+    padding: 38px 24px;
+    border-radius: 22px;
+  }
+
+  .heroTop {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .heroTitle {
+    font-size: clamp(1.75rem, 7vw, 2.2rem);
+    line-height: 1.15;
+  }
+
+  .heroDescription {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .statsGrid {
+    margin-top: 28px;
+    gap: 12px;
+  }
+
+  .statCard {
+    padding: 18px;
+  }
+
+  .section {
+    margin-top: 20px;
+    padding: 24px 20px;
+    border-radius: 15px;
+  }
+
+  .sectionTitle {
+    font-size: 1.45rem;
+    line-height: 1.3;
+  }
+
+  .sectionText {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .cityChip {
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+
+  .stepItem {
+    gap: 14px;
+    padding: 15px 0;
+  }
+
+  .stepText {
+    padding-top: 5px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .ctaSection {
+    margin-top: 40px;
+    padding: 28px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 16px;
+  }
+
+  .ctaText {
+    font-size: 18px;
+  }
+
+  .formSection {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero {
+    padding: 30px 18px;
+    border-radius: 18px;
+  }
+
+  .heroTop {
+    flex-direction: column;
+  }
+
+  .heroBadge {
+    width: 54px;
+    height: 54px;
+    font-size: 13px;
+  }
+
+  .heroTagline {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statCard:last-child {
+    grid-column: auto;
+  }
+
+  .statValue {
+    font-size: 18px;
+  }
+
+  .chip {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+
+  .section {
+    padding: 20px 16px;
+  }
+
+  .sectionHeading {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .sectionIcon {
+    width: 34px;
+    height: 34px;
+    font-size: 0.9rem;
+  }
+
+  .sectionTitle {
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+  }
+
+  .cityChips {
+    gap: 7px;
+  }
+
+  .stepsList {
+    gap: 0;
+  }
+
+  .stepItem {
+    gap: 12px;
+  }
+
+  .stepItem:not(:last-child)::before {
+    left: 15px;
+  }
+
+  .stepIndex {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .ctaSection {
+    margin-top: 32px;
+    padding: 24px 18px;
+  }
+
+  .ctaButtons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .ctaPrimary,
+  .ctaSecondary {
+    width: 100%;
+    padding: 12px 16px;
+    text-align: center;
+  }
+}
+
+@media (hover: none) {
+  .section:hover,
+  .statCard:hover,
+  .cityChip:hover,
+  .ctaPrimary:hover,
+  .ctaSecondary:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero,
+  .section,
+  .statCard,
+  .cityChip,
+  .ctaPrimary,
+  .ctaSecondary {
+    transition: none;
+  }
+}
