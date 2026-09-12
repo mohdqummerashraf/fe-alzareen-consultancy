@@ -2,7 +2,7 @@
 import Home from '@/components/home/Home';
 
 export const metadata = {
-  metadataBase: new URL('https://alzareeninternational.com'),
+  metadataBase: new URL('https://alzareenglobaloverseas.com'),
 
   title: 'Overseas Recruitment Agency | GCC Jobs, UAE Jobs & Gulf Hiring | Alzareen International',
 
@@ -22,20 +22,20 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: 'https://alzareeninternational.com',
+    canonical: 'https://alzareenglobaloverseas.com',
   },
 
   openGraph: {
     title: 'Overseas Recruitment Agency | GCC Jobs & Overseas Employment',
     description:
       'Licensed overseas recruitment agency connecting candidates with verified employers across the Gulf and beyond.',
-    url: 'https://alzareeninternational.com',
+    url: 'https://alzareenglobaloverseas.com',
     siteName: 'Alzareen International',
     locale: 'en_IN',
     type: 'website',
     images: [
       {
-        url: 'https://alzareeninternational.com/og-image.jpg',
+        url: 'https://alzareenglobaloverseas.com/og-image.jpg',
         width: 1200,
         height: 630,
       },
@@ -47,7 +47,7 @@ export const metadata = {
     title: 'Alzareen International',
     description:
       'Find overseas jobs and recruitment drives across UAE, Saudi Arabia, Qatar and other Gulf countries.',
-    images: ['https://alzareeninternational.com/og-image.jpg'],
+    images: ['https://alzareenglobaloverseas.com/og-image.jpg'],
   },
 
   robots: {

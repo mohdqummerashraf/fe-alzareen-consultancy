@@ -1,12 +1,12 @@
-import HeroSection from '@/components/common/HeroSection';
-import { serviceList } from '@/constants/Data';
 import Breadcrumb from '@/components/SEO/Breadcrumb';
-import LeadForm from '@/components/forms/LeadForm';
 import FAQCard from '@/components/common/FAQCard';
+import HeroSection from '@/components/common/HeroSection';
+import LeadForm from '@/components/forms/LeadForm';
+import { serviceList } from '@/constants/Data';
 
 import styles from './servicePage.module.css';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.alzareeninternational.com';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.alzareenglobaloverseas.com';
 const PAGE_PATH = '/services';
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 
@@ -147,15 +147,15 @@ export default function ServicesPage() {
         <section className={styles.introSection}>
           <h2>Overseas Recruitment Support Services</h2>
           <p>
-            Working abroad involves much more than finding a job. Candidates often require
-            support with documentation, visa processing, medical examinations, training,
-            certifications, and travel preparation. Our team helps simplify every stage of the
-            overseas employment journey.
+            Working abroad involves much more than finding a job. Candidates often require support
+            with documentation, visa processing, medical examinations, training, certifications, and
+            travel preparation. Our team helps simplify every stage of the overseas employment
+            journey.
           </p>
           <p>
-            Whether you're applying for jobs in the UAE, Saudi Arabia, Qatar, Kuwait, Oman,
-            Europe, or Asia, we provide reliable guidance to ensure smoother processing and
-            faster deployment.
+            Whether you're applying for jobs in the UAE, Saudi Arabia, Qatar, Kuwait, Oman, Europe,
+            or Asia, we provide reliable guidance to ensure smoother processing and faster
+            deployment.
           </p>
         </section>
 
@@ -195,8 +195,8 @@ export default function ServicesPage() {
         <section className={styles.ctaSection}>
           <h2>Ready to Start Your Overseas Career?</h2>
           <p>
-            Get professional assistance with visas, documentation, training, medical
-            coordination, and travel support.
+            Get professional assistance with visas, documentation, training, medical coordination,
+            and travel support.
           </p>
         </section>
 

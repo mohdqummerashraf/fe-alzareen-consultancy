@@ -1,22 +1,22 @@
-import { notFound } from 'next/navigation';
-import Link from 'next/link';
-import {
-  FaBriefcase,
-  FaMoneyBillWave,
-  FaUserTie,
-  FaLightbulb,
-  FaPassport,
-  FaListOl,
-} from 'react-icons/fa';
+import FAQCard from '@/components/common/FAQCard';
 import JobCardSection from '@/components/common/JobCardSection';
 import LeadForm from '@/components/forms/LeadForm';
-import { countries, getCountryBySlug } from '../data';
-import { getFeaturedByCountry } from '@/services/getFeaturedJobByCountry';
-import styles from './CountryDetail.module.css';
-import FAQCard from '@/components/common/FAQCard';
 import Breadcrumb from '@/components/SEO/Breadcrumb';
+import { getFeaturedByCountry } from '@/services/getFeaturedJobByCountry';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import {
+  FaBriefcase,
+  FaLightbulb,
+  FaListOl,
+  FaMoneyBillWave,
+  FaPassport,
+  FaUserTie,
+} from 'react-icons/fa';
+import { countries, getCountryBySlug } from '../data';
+import styles from './CountryDetail.module.css';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.alzareeninternational.com';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.alzareenglobaloverseas.com';
 
 const FLAG_THEMES = {
   AE: { from: '#00732F', to: '#0F1419' },
@@ -172,7 +172,9 @@ export default async function CountryPage({ params }) {
                 <FaBriefcase aria-hidden="true" />
               </span>
               <span className={styles.statLabel}>Open roles</span>
-              <span className={styles.statValue}>{countryJobs.length + countryDrives.length || country.roleCount}</span>
+              <span className={styles.statValue}>
+                {countryJobs.length + countryDrives.length || country.roleCount}
+              </span>
             </div>
             <div className={styles.statCard}>
               <span className={styles.statIcon}>

@@ -1,6 +1,6 @@
-import { jobPostingSchema } from "@/services/buildJobPostingSchema";
+import { jobPostingSchema } from '@/services/buildJobPostingSchema';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.alzareeninternational.com';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.alzareenglobaloverseas.com';
 
 export default function DriveSchema({ drive }) {
   if (!drive) return null;

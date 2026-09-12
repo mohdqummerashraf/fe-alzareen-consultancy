@@ -6,7 +6,7 @@ export const WebsiteSchema = () => (
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         name: 'Alzareen International',
-        url: 'https://alzareeninternational.com',
+        url: 'https://alzareenglobaloverseas.com',
       }),
     }}
   />
@@ -20,8 +20,8 @@ export const OrganizationSchema = () => (
         '@context': 'https://schema.org',
         '@type': 'Organization',
         name: 'Alzareen International',
-        url: 'https://alzareeninternational.com',
-        logo: 'https://alzareeninternational.com/logo.png',
+        url: 'https://alzareenglobaloverseas.com',
+        logo: 'https://alzareenglobaloverseas.com/logo.png',
       }),
     }}
   />

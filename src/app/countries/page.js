@@ -2,7 +2,7 @@ import { getCountryJobCount, getJobCountsByCountry } from '@/services/getJobCoun
 import CountryDetail from './CountryDetail';
 import { countries } from './data';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.alzareeninternational.com';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.alzareenglobaloverseas.com';
 
 export const metadata = {
   title: 'Overseas Job Destinations | UAE, Saudi Arabia, Qatar & More | Alzareen International',
@@ -31,9 +31,7 @@ export const metadata = {
 export default async function CountriesPage() {
   const jobCounts = await getJobCountsByCountry();
 
-  const countriesWithJobs = countries.filter(
-    (c) => getCountryJobCount(jobCounts, c) > 0
-  );
+  const countriesWithJobs = countries.filter((c) => getCountryJobCount(jobCounts, c) > 0);
 
   const itemListSchema = {
     '@context': 'https://schema.org',

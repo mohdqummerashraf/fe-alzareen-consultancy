@@ -1,7 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
 import styles from '@/styles/Footer.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const gccDestinations = [
   { label: 'Jobs in UAE', slug: 'united-arab-emirates' },
@@ -101,14 +100,16 @@ function Footer() {
             </ul>
           </div>
 
-          <div className={styles.footerSection} >
+          <div className={styles.footerSection}>
             <h3>Contact</h3>
             <ul>
               <li>
                 <a href="tel:+917479744885">+91 7479744885</a>
               </li>
               <li>
-                <a href="mailto:hello@alzareeninternational.com">hello@alzareeninternational.com</a>
+                <a href="mailto:hello@alzareenglobaloverseas.com">
+                  hello@alzareenglobaloverseas.com
+                </a>
               </li>
               <li>Nehru Place, New Delhi</li>
             </ul>

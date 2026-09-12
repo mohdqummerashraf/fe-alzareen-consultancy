@@ -1,5 +1,5 @@
-import { notFound } from 'next/navigation';
 import JobDetail from '@/components/jobs/JobDetail';
+import { notFound } from 'next/navigation';
 
 async function getJobBySlug(slug) {
   if (!slug) return null;
@@ -29,7 +29,9 @@ export async function generateMetadata({ params }) {
     return { title: 'Job Not Found | Alzareen International' };
   }
 
-  const title = job.meta_title || `${job.title} at ${job.company || 'Alzareen International'} | ${job.country || ''}`;
+  const title =
+    job.meta_title ||
+    `${job.title} at ${job.company || 'Alzareen International'} | ${job.country || ''}`;
   const description =
     job.meta_description ||
     `${job.title} in ${job.location || job.country || 'the Gulf'}. ${job.salary_display || ''} Apply now through Alzareen International.`.trim();
@@ -39,14 +41,15 @@ export async function generateMetadata({ params }) {
     description,
     keywords: job.meta_keywords || undefined,
     alternates: {
-      canonical: `https://www.alzareeninternational.com/job-listing/${job.slug}`,
+      canonical: `https://www.alzareenglobaloverseas.com/job-listing/${job.slug}`,
     },
     openGraph: {
       title,
       description,
-      url: `https://www.alzareeninternational.com/job-listing/${job.slug}`,
+      url: `https://www.alzareenglobaloverseas.com/job-listing/${job.slug}`,
       type: 'website',
-      images: job.og_image || job.banner_image ? [{ url: job.og_image || job.banner_image }] : undefined,
+      images:
+        job.og_image || job.banner_image ? [{ url: job.og_image || job.banner_image }] : undefined,
     },
     twitter: {
       card: 'summary_large_image',

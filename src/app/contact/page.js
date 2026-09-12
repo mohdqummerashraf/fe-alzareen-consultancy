@@ -1,5 +1,5 @@
-import { Phone, MessageCircle, Mail, MapPin, Clock, Navigation } from 'lucide-react';
 import LeadForm from '@/components/forms/LeadForm';
+import { Clock, Mail, MapPin, MessageCircle, Navigation, Phone } from 'lucide-react';
 import styles from './Contact.module.css';
 
 const OFFICE_ADDRESS = 'Alzareen International Careers, 3rd Floor, Nehru Place, New Delhi, 110019';
@@ -89,8 +89,8 @@ export default function ContactPage() {
             </span>
             <div>
               <h2 className={styles.officeTitle}>Email</h2>
-              <a href="mailto:hello@alzareeninternational.com" className={styles.officeText}>
-                hello@alzareeninternational.com
+              <a href="mailto:hello@alzareenglobaloverseas.com" className={styles.officeText}>
+                hello@alzareenglobaloverseas.com
               </a>
             </div>
           </div>

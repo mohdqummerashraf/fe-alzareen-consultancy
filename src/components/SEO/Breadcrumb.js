@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import styles from '@/styles/Breadcrumb.module.css';
+import Link from 'next/link';
 
 export default function Breadcrumb({ items = [] }) {
   if (items.length === 0) return null;
@@ -11,7 +11,7 @@ export default function Breadcrumb({ items = [] }) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.label,
-      ...(item.href && { item: `https://www.alzareeninternational.com${item.href}` }),
+      ...(item.href && { item: `https://www.alzareenglobaloverseas.com${item.href}` }),
     })),
   };
 
