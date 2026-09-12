@@ -1,5 +1,5 @@
-import { notFound } from 'next/navigation';
 import RecruitmentDriveDetail from '@/components/recruitment-drive/RecruitmentDriveDetail';
+import { notFound } from 'next/navigation';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.wayportcareers.com';
 
@@ -44,14 +44,16 @@ export async function generateMetadata({ params }) {
 
   if (!drive) {
     return {
-      title: 'Recruitment Drive Not Found | Alzareen International Careers',
+      title: 'Recruitment Drive Not Found | Alzareen Global Overseas',
       robots: { index: false, follow: false },
     };
   }
 
   const title = drive.meta_title || `${drive.title} | ${drive.vacancies} Vacancies`;
   const description =
-    drive.meta_description || stripHtml(drive.description).slice(0, 160) || `${drive.title} — hiring in ${drive.country}.`;
+    drive.meta_description ||
+    stripHtml(drive.description).slice(0, 160) ||
+    `${drive.title} — hiring in ${drive.country}.`;
   const canonicalUrl = `${SITE_URL}/recruitment-drive/${drive.slug}`;
 
   return {

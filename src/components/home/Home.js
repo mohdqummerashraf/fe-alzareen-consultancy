@@ -1,12 +1,13 @@
 import dynamic from 'next/dynamic';
 
-import { countries, serviceList } from '../../constants/Data';
 import styles from '@/styles/Home/Home.module.css';
-import { PlaneIcon } from '../ui/Icons';
-import SearchForm from '../common/SearchForm';
 import Link from 'next/link';
+import { countries, serviceList } from '../../constants/Data';
 import LazySection from '../common/LazySection';
+import SearchForm from '../common/SearchForm';
+import { PlaneIcon } from '../ui/Icons';
 
+import { homeJSONLD } from '../SEO/JSONSchema';
 import LatestJobs from './LatestJobs'; // SSR
 
 const FeaturedRecruitment = dynamic(() => import('./FeaturedRecruitment'), {
@@ -20,28 +21,36 @@ const LeadForm = dynamic(() => import('../forms/LeadForm'), {
 export default function Home() {
   return (
     <div className={styles.page} id="top">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homeJSONLD),
+        }}
+      />
       <main>
         <section className={styles.hero} aria-labelledby="hero-heading">
           <div className={`${styles.wrap} ${styles.heroGrid}`}>
             <div>
               <div className={styles.heroEyebrowRow}>
-                <span className={styles.eyebrow}>Licensed Overseas Recruitment · Est. 2018</span>
+                <span className={styles.eyebrow}>
+                  Overseas Recruitment · GCC Jobs · International Careers
+                </span>
               </div>
               <h1 id="hero-heading" className={styles.heroTitle}>
-                Your next job
+                Overseas jobs
                 <br />
-                is <em>a flight away.</em>
+                your <em>next oppotunity awaits.</em>
               </h1>
               <p className={styles.lede}>
-                Alzareen International connects skilled and semi-skilled candidates with verified
-                employers across the Gulf, Europe, and beyond — from first application to the day
-                you land.
+                Alzareen Global Overseas connects skilled and semi-skilled candidates with verified
+                employers across the GCC, Europe, and other international markets, supporting
+                candidates throughout their overseas employment journey.
               </p>
               <SearchForm page={'Home'} />
               <dl className={styles.heroStats}>
                 <div>
                   <dt>
-                    <strong>5000+</strong>
+                    <strong>3000+</strong>
                   </dt>
                   <dd>candidates placed</dd>
                 </div>
@@ -128,13 +137,13 @@ export default function Home() {
               <div>
                 <span className={styles.eyebrow}>Overseas Recruitment Services</span>
 
-                <h2 id="services-heading">Complete Recruitment Support</h2>
+                <h2 id="services-heading">Overseas Recruitment Support</h2>
               </div>
 
               <p>
-                From job matching and interviews to documentation, visa processing, medical
-                examinations and deployment assistance, we support candidates throughout the
-                overseas recruitment journey.
+                We support candidates throughout the overseas recruitment process, including job
+                matching, interviews, documentation, visa processing, medical examinations and
+                deployment assistance.
               </p>
             </div>
             <div className={styles.servicesBand}>

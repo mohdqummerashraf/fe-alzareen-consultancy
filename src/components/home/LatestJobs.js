@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import styles from '@/styles/Home/LatestJobs.module.css';
+import Link from 'next/link';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 

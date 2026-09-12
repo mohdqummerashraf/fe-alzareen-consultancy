@@ -4,21 +4,25 @@ import Home from '@/components/home/Home';
 export const metadata = {
   metadataBase: new URL('https://alzareenglobaloverseas.com'),
 
-  title: 'Overseas Recruitment Agency | GCC Jobs, UAE Jobs & Gulf Hiring | Alzareen International',
+  title:
+    'Overseas Recruitment Agency | GCC Jobs, UAE Jobs & Gulf Hiring | Alzareen Global Overseas',
 
   description:
-    'Alzareen International is a licensed overseas recruitment agency helping skilled and semi-skilled candidates find jobs in UAE, Saudi Arabia, Qatar, Kuwait and other Gulf countries. 5000+ candidates placed worldwide.',
+    'Alzareen Global Overseas is an overseas recruitment and manpower consultancy connecting skilled and semi-skilled candidates with employment opportunities across UAE, Saudi Arabia, Qatar, Kuwait and other Gulf countries.',
 
   keywords: [
-    'overseas jobs',
-    'gulf jobs',
-    'uae jobs',
-    'saudi arabia jobs',
-    'qatar jobs',
-    'kuwait jobs',
-    'manpower consultancy',
-    'international recruitment',
+    'Alzareen Global Overseas',
     'overseas recruitment agency',
+    'overseas jobs',
+    'GCC jobs',
+    'Gulf jobs',
+    'UAE jobs',
+    'Saudi Arabia jobs',
+    'Qatar jobs',
+    'Kuwait jobs',
+    'overseas manpower consultancy',
+    'international recruitment',
+    'Gulf manpower recruitment',
   ],
 
   alternates: {
@@ -26,27 +30,37 @@ export const metadata = {
   },
 
   openGraph: {
-    title: 'Overseas Recruitment Agency | GCC Jobs & Overseas Employment',
+    title: 'Alzareen Global Overseas | Overseas Recruitment & GCC Jobs',
+
     description:
-      'Licensed overseas recruitment agency connecting candidates with verified employers across the Gulf and beyond.',
+      'Alzareen Global Overseas connects skilled and semi-skilled candidates with overseas employment opportunities across the GCC and other international markets.',
+
     url: 'https://alzareenglobaloverseas.com',
-    siteName: 'Alzareen International',
+
+    siteName: 'Alzareen Global Overseas',
+
     locale: 'en_IN',
+
     type: 'website',
+
     images: [
       {
         url: 'https://alzareenglobaloverseas.com/og-image.jpg',
         width: 1200,
         height: 630,
+        alt: 'Alzareen Global Overseas',
       },
     ],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Alzareen International',
+
+    title: 'Alzareen Global Overseas | Overseas Jobs & Recruitment',
+
     description:
-      'Find overseas jobs and recruitment drives across UAE, Saudi Arabia, Qatar and other Gulf countries.',
+      'Explore overseas employment opportunities and GCC jobs through Alzareen Global Overseas.',
+
     images: ['https://alzareenglobaloverseas.com/og-image.jpg'],
   },
 

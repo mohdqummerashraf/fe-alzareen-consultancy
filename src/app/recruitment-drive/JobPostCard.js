@@ -1,48 +1,87 @@
-import React from 'react';
 import Link from 'next/link';
 import styles from './JobPostCard.module.css';
+
+function stripHtml(html) {
+  if (!html || typeof html !== 'string') {
+    return '';
+  }
+
+  return html
+    .replace(/<[^>]*>/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
 
 const JobPostCard = ({ drive }) => {
   if (!drive) return null;
 
-  const summaryHtml = typeof drive.summary === 'string' ? drive.summary : '';
+  const summary = stripHtml(drive.summary);
+
+  const country = drive.country || 'International';
+
+  const industry = drive.industry || 'Various Industries';
+
+  const vacancies = drive.vacancies ?? drive.total_vacancies;
+
+  const positions = drive.positions ?? drive.total_positions;
+
+  const postedDays = drive.postedDaysAgo ?? drive.posted_days_ago;
 
   return (
     <article className={styles.driveCard}>
-      <div className={styles.driveImage}>
-        <img src={drive.poster} alt={drive.title} />
-      </div>
+      {/* Poster */}
+      {drive.poster ? (
+        <div className={styles.driveImage}>
+          <img src={drive.poster} alt={`${drive.title} recruitment drive`} loading="lazy" />
+        </div>
+      ) : (
+        <div className={styles.driveImage} aria-hidden="true" />
+      )}
 
       <div className={styles.driveContent}>
+        {/* Meta */}
         <div className={styles.driveMeta}>
-          <span>{drive.country}</span>
-          <span>{drive.industry}</span>
+          <span>{country}</span>
+          <span>{industry}</span>
         </div>
 
-        <h2>{drive.title}</h2>
+        {/* Title */}
+        <h3>{drive.title}</h3>
 
-        {summaryHtml && (
-          <div className={styles.summary} dangerouslySetInnerHTML={{ __html: summaryHtml }} />
-        )}
+        {/* Summary */}
+        {summary && <p className={styles.summary}>{summary}</p>}
 
+        {/* Stats */}
         <div className={styles.driveStats}>
-          <div>
-            <strong>{drive.vacancies}</strong>
-            <span>Vacancies</span>
-          </div>
-          <div>
-            <strong>{drive.positions}</strong>
-            <span>Positions</span>
-          </div>
-          <div>
-            <strong>{drive.postedDaysAgo} Days</strong>
-            <span>Posted</span>
-          </div>
+          {vacancies != null && (
+            <div>
+              <strong>{vacancies}</strong>
+              <span>Vacancies</span>
+            </div>
+          )}
+
+          {positions != null && (
+            <div>
+              <strong>{positions}</strong>
+              <span>Positions</span>
+            </div>
+          )}
+
+          {postedDays != null && (
+            <div>
+              <strong>{postedDays === 0 ? 'Today' : `${postedDays} Days`}</strong>
+
+              <span>Posted</span>
+            </div>
+          )}
         </div>
 
-        <Link href={`/recruitment-drive/${drive.slug}`} className={styles.viewBtn}>
-          View Positions →
-        </Link>
+        {/* CTA */}
+        {drive.slug && (
+          <Link href={`/recruitment-drive/${drive.slug}`} className={styles.viewBtn}>
+            View Positions →
+          </Link>
+        )}
       </div>
     </article>
   );

@@ -1,28 +1,28 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
 import LeadForm from '@/components/forms/LeadForm';
 import Breadcrumb from '@/components/SEO/Breadcrumb';
-import styles from './AboutUs.module.css';
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 import {
-  FaGlobeAmericas,
+  FaBriefcaseMedical,
   FaBuilding,
   FaBullseye,
+  FaCheckCircle,
+  FaChevronDown,
+  FaConciergeBell,
+  FaGlobeAmericas,
   FaGlobeAsia,
+  FaHardHat,
+  FaHome,
+  FaIndustry,
+  FaLaptopCode,
   FaListOl,
   FaShieldAlt,
-  FaCheckCircle,
-  FaHardHat,
-  FaConciergeBell,
-  FaBriefcaseMedical,
-  FaIndustry,
-  FaTruck,
-  FaHome,
   FaStore,
-  FaLaptopCode,
-  FaChevronDown,
+  FaTruck,
 } from 'react-icons/fa';
+import styles from './AboutUs.module.css';
 
 const countryGroups = [
   { label: 'GCC', countries: 'Saudi Arabia, UAE, Qatar, Kuwait, Bahrain, Oman' },
@@ -156,19 +156,17 @@ export default function AboutPageDetail() {
           <FaGlobeAmericas aria-hidden="true" />
         </div>
         <p className={styles.eyebrow}>About Us</p>
-        <h1 className={styles.heroTitle}>Alzareen International Manpower Consultancy</h1>
+        <h1 className={styles.heroTitle}>About Alzareen Global Overseas</h1>{' '}
         <p className={styles.heroSubtitle}>
-          Connecting skilled, semi-skilled, and unskilled talent from India with genuine
-          employment opportunities across the GCC and beyond, in both formal and informal
-          sectors.
+          Alzareen Global Overseas is an overseas recruitment and manpower consultancy connecting
+          skilled, semi-skilled and professional candidates from India with employment opportunities
+          across the GCC and other international markets.
         </p>
-
         <div className={styles.statsRow}>
           <StatCounter value={28} suffix="+" label="Destination countries" />
           <StatCounter value={5000} suffix="+" label="Candidates placed" />
           <StatCounter value={96} suffix="%" label="Visa approval rate" />
         </div>
-
         {/* Quick nav */}
         <nav className={styles.quickNav} aria-label="Page sections">
           {quickNav.map((item) => (
@@ -190,21 +188,19 @@ export default function AboutPageDetail() {
           <span className={`${styles.sectionIcon} ${styles.iconRoute}`}>
             <FaBuilding aria-hidden="true" />
           </span>
-          <h2>Who We Are</h2>
+          <h2>Who We Are</h2>{' '}
         </div>
         <p>
-          Alzareen International Manpower Consultancy is a recruitment and overseas placement
-          agency based in India, specializing in connecting candidates with employers across the
-          Gulf Cooperation Council (GCC) region and select international markets. We work across
-          both the formal sector — organized, contract-based employment with established
-          companies — and the informal sector, including household, domestic, and daily-wage
-          roles, ensuring opportunities exist for candidates at every skill level.
+          Alzareen Global Overseas is an India-based overseas recruitment and manpower consultancy
+          helping skilled, semi-skilled and professional candidates connect with employment
+          opportunities across the GCC and selected international markets.
         </p>
+
         <p>
-          Our team manages every stage of the placement journey, from candidate registration and
-          documentation through to interview coordination, visa processing, and post-deployment
-          support, so that both candidates and employers can rely on a transparent and
-          accountable process from start to finish.
+          Our recruitment process supports candidates from registration and document verification
+          through employer interviews, visa processing, medical requirements and overseas
+          deployment. We work with employers and recruitment partners to help connect suitable
+          candidates with relevant job opportunities.
         </p>
       </section>
 
@@ -217,10 +213,9 @@ export default function AboutPageDetail() {
           <h2>Our Mission</h2>
         </div>
         <p>
-          To be a trusted bridge between Indian talent and overseas employers by delivering
-          ethical, transparent, and efficient recruitment services — helping candidates find
-          secure livelihoods abroad while helping employers access reliable, well-matched
-          manpower.
+          To be a trusted bridge between Indian talent and overseas employers by delivering ethical,
+          transparent, and efficient recruitment services — helping candidates find secure
+          livelihoods abroad while helping employers access reliable, well-matched manpower.
         </p>
       </section>
 
@@ -230,7 +225,7 @@ export default function AboutPageDetail() {
           <span className={`${styles.sectionIcon} ${styles.iconTeal}`}>
             <FaGlobeAsia aria-hidden="true" />
           </span>
-          <h2>Countries We Serve</h2>
+          <h2>Countries We Serve</h2>{' '}
         </div>
         <div className={styles.countryGrid}>
           {countryGroups.map((group) => (

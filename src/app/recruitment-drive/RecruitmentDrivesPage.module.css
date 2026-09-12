@@ -54,7 +54,57 @@
   gap: 28px;
 }
 
+.seoSection {
+  max-width: 900px;
+  margin: 28px auto 36px;
+  padding: 0 28px;
+}
+
+.seoSection h2 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: 14px;
+}
+
+.seoSection p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(19, 27, 52, 0.68);
+  margin-bottom: 10px;
+}
+
+.recruitmentDrivesSubtitle {
+  margin: 6px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(19, 27, 52, 0.62);
+}
+
+@media (max-width: 720px) {
+  .seoSection {
+    margin: 24px auto 30px;
+    padding: 0 20px;
+  }
+
+  .seoSection h2 {
+    font-size: 23px;
+  }
+
+  .seoSection p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .recruitmentDrivesSubtitle {
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 1024px) {
+
   .filterSection,
   .recruitmentDrivesContainer,
   .drivesGrid {
@@ -67,6 +117,7 @@
 }
 
 @media (max-width: 768px) {
+
   .filterSection,
   .recruitmentDrivesContainer,
   .drivesGrid {
@@ -88,6 +139,7 @@
 }
 
 @media (max-width: 480px) {
+
   .filterSection,
   .recruitmentDrivesContainer,
   .drivesGrid {
